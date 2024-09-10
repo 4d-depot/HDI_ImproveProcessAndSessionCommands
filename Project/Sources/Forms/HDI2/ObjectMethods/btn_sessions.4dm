@@ -1,0 +1,1 @@
+Form:C1466.activity:=GetActivity(Form:C1466.rType; Form:C1466.trace)

@@ -1,0 +1,730 @@
+{
+	"destination": "detailScreen",
+	"windowMinWidth": 1000,
+	"windowMaxWidth": 32000,
+	"windowMinHeight": 660,
+	"windowMaxHeight": 32000,
+	"width": 1000,
+	"height": 660,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onCloseBox"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "842pt",
+		"paperHeight": "595pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Tab Control": {
+					"type": "tab",
+					"top": 20,
+					"left": 20,
+					"width": 960,
+					"height": 580,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "objTabs",
+					"dataSourceTypeHint": "object",
+					"action": "gotoPage",
+					"events": [
+						"onClick"
+					]
+				},
+				"BtnOK": {
+					"type": "button",
+					"top": 620,
+					"left": 838,
+					"width": 102,
+					"height": 20,
+					"sizingX": "move",
+					"sizingY": "move",
+					"tooltip": {
+						"$ref": "/SOURCES/tips.json#/OK"
+					},
+					"shortcutKey": "[Enter]",
+					"text": "OK",
+					"class": "Buttons_13",
+					"defaultButton": true,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/BtnOK.4dm"
+				},
+				"Line": {
+					"type": "line",
+					"top": 0,
+					"left": 500,
+					"height": 640,
+					"visibility": "hidden",
+					"sizingY": "grow",
+					"stroke": "#800080",
+					"strokeDashArray": "1 1"
+				},
+				"Check Box": {
+					"type": "checkbox",
+					"text": "Trace",
+					"top": 620,
+					"left": 20,
+					"width": 130,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"dataSourceTypeHint": "boolean",
+					"dataSource": "Form:C1466.trace",
+					"sizingY": "move"
+				}
+			}
+		},
+		{
+			"objects": {
+				"information": {
+					"type": "input",
+					"top": 80,
+					"left": 80,
+					"width": 840,
+					"height": 488,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "Infos[0].Description",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"class": "description"
+				}
+			}
+		},
+		{
+			"objects": {
+				"information2": {
+					"type": "input",
+					"top": 80,
+					"left": 40,
+					"width": 920,
+					"height": 110,
+					"sizingY": "fixed",
+					"dataSource": "Infos[1].Description",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"class": "description",
+					"sizingX": "grow"
+				},
+				"btnProcessProperties": {
+					"type": "button",
+					"text": "Process Properties",
+					"top": 265,
+					"left": 40,
+					"width": 270,
+					"height": 27,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/btnProcessProperties.4dm"
+				},
+				"Text": {
+					"type": "text",
+					"text": "Number:",
+					"top": 340,
+					"left": 40,
+					"width": 138,
+					"height": 16
+				},
+				"Input": {
+					"type": "input",
+					"left": 201,
+					"top": 340,
+					"width": 240,
+					"height": 17,
+					"dataSource": "Form:C1466.procProperties.number",
+					"enterable": false
+				},
+				"Text1": {
+					"type": "text",
+					"text": "ID:",
+					"top": 372,
+					"left": 40,
+					"width": 138,
+					"height": 16
+				},
+				"Input1": {
+					"type": "input",
+					"left": 201,
+					"top": 372,
+					"width": 240,
+					"height": 17,
+					"dataSource": "Form:C1466.procProperties.ID",
+					"enterable": false
+				},
+				"Text2": {
+					"type": "text",
+					"text": "Name:",
+					"top": 404,
+					"left": 40,
+					"width": 138,
+					"height": 16
+				},
+				"Input2": {
+					"type": "input",
+					"left": 201,
+					"top": 404,
+					"width": 240,
+					"height": 17,
+					"dataSource": "Form:C1466.procProperties.name",
+					"enterable": false
+				},
+				"Text3": {
+					"type": "text",
+					"text": "SessionID:",
+					"top": 436,
+					"left": 40,
+					"width": 138,
+					"height": 16
+				},
+				"Input3": {
+					"type": "input",
+					"left": 201,
+					"top": 436,
+					"width": 240,
+					"height": 17,
+					"dataSource": "Form:C1466.procProperties.sessionID",
+					"enterable": false
+				},
+				"Text4": {
+					"type": "text",
+					"text": "Creation Date Time:",
+					"top": 468,
+					"left": 40,
+					"width": 138,
+					"height": 16
+				},
+				"Input4": {
+					"type": "input",
+					"left": 201,
+					"top": 468,
+					"width": 240,
+					"height": 17,
+					"dataSource": "Form:C1466.procProperties.creationDateTime",
+					"enterable": false
+				},
+				"Text5": {
+					"type": "text",
+					"text": "Preemptive:",
+					"top": 340,
+					"left": 559,
+					"width": 138,
+					"height": 16
+				},
+				"Input5": {
+					"type": "input",
+					"left": 720,
+					"top": 340,
+					"width": 240,
+					"height": 17,
+					"dataSource": "Form:C1466.procProperties.preemptive",
+					"enterable": false
+				},
+				"Text6": {
+					"type": "text",
+					"text": "Visible:",
+					"top": 372,
+					"left": 559,
+					"width": 138,
+					"height": 16
+				},
+				"Input6": {
+					"type": "input",
+					"left": 720,
+					"top": 372,
+					"width": 240,
+					"height": 17,
+					"dataSource": "Form:C1466.procProperties.visible",
+					"enterable": false
+				},
+				"Text7": {
+					"type": "text",
+					"text": "Type:",
+					"top": 404,
+					"left": 559,
+					"width": 138,
+					"height": 16
+				},
+				"Input7": {
+					"type": "input",
+					"left": 720,
+					"top": 404,
+					"width": 240,
+					"height": 17,
+					"dataSource": "ProcessTypeToString(Form:C1466.procProperties.type)",
+					"enterable": false
+				},
+				"Text8": {
+					"type": "text",
+					"text": "State:",
+					"top": 436,
+					"left": 559,
+					"width": 138,
+					"height": 16
+				},
+				"Input8": {
+					"type": "input",
+					"left": 720,
+					"top": 436,
+					"width": 240,
+					"height": 17,
+					"dataSource": "ProcessStateToString(Form:C1466.procProperties.state)",
+					"enterable": false
+				}
+			}
+		},
+		{
+			"objects": {
+				"information1": {
+					"type": "input",
+					"top": 80,
+					"left": 40,
+					"width": 920,
+					"height": 128,
+					"sizingX": "grow",
+					"sizingY": "fixed",
+					"dataSource": "Infos[2].Description",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"class": "description"
+				},
+				"btnSessionProperties": {
+					"type": "button",
+					"text": "Session Properties",
+					"top": 265,
+					"left": 40,
+					"width": 270,
+					"height": 27,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/btnSessionProperties.4dm"
+				},
+				"Text9": {
+					"type": "text",
+					"text": "ID:",
+					"top": 340,
+					"left": 39,
+					"width": 138,
+					"height": 16
+				},
+				"Input9": {
+					"type": "input",
+					"left": 200,
+					"top": 340,
+					"width": 240,
+					"height": 17,
+					"dataSource": "Form:C1466.sessionProperties.ID",
+					"enterable": false
+				},
+				"Text10": {
+					"type": "text",
+					"text": "User Name:",
+					"top": 372,
+					"left": 39,
+					"width": 138,
+					"height": 16
+				},
+				"Input10": {
+					"type": "input",
+					"left": 200,
+					"top": 372,
+					"width": 240,
+					"height": 17,
+					"dataSource": "Form:C1466.sessionProperties.userName",
+					"enterable": false
+				},
+				"Text11": {
+					"type": "text",
+					"text": "Machine Name:",
+					"top": 404,
+					"left": 39,
+					"width": 138,
+					"height": 16
+				},
+				"Input11": {
+					"type": "input",
+					"left": 200,
+					"top": 404,
+					"width": 240,
+					"height": 17,
+					"dataSource": "Form:C1466.sessionProperties.machineName",
+					"enterable": false
+				},
+				"Text12": {
+					"type": "text",
+					"text": "System User Name:",
+					"top": 436,
+					"left": 39,
+					"width": 138,
+					"height": 16
+				},
+				"Input12": {
+					"type": "input",
+					"left": 200,
+					"top": 436,
+					"width": 240,
+					"height": 17,
+					"dataSource": "Form:C1466.sessionProperties.systemUserName",
+					"enterable": false
+				},
+				"Text13": {
+					"type": "text",
+					"text": "Creation Date Time:",
+					"top": 468,
+					"left": 39,
+					"width": 138,
+					"height": 16
+				},
+				"Input13": {
+					"type": "input",
+					"left": 200,
+					"top": 468,
+					"width": 240,
+					"height": 17,
+					"dataSource": "Form:C1466.sessionProperties.creationDateTime",
+					"enterable": false
+				},
+				"Text14": {
+					"type": "text",
+					"text": "IP Adress:",
+					"top": 340,
+					"left": 559,
+					"width": 138,
+					"height": 16
+				},
+				"Input14": {
+					"type": "input",
+					"left": 720,
+					"top": 340,
+					"width": 240,
+					"height": 17,
+					"dataSource": "Form:C1466.sessionProperties.IPAdress",
+					"enterable": false
+				},
+				"Text15": {
+					"type": "text",
+					"text": "Host Type:",
+					"top": 372,
+					"left": 559,
+					"width": 138,
+					"height": 16
+				},
+				"Input15": {
+					"type": "input",
+					"left": 720,
+					"top": 372,
+					"width": 240,
+					"height": 17,
+					"dataSource": "Form:C1466.sessionProperties.hostType",
+					"enterable": false
+				},
+				"Text16": {
+					"type": "text",
+					"text": "Type:",
+					"top": 404,
+					"left": 559,
+					"width": 138,
+					"height": 16
+				},
+				"Input16": {
+					"type": "input",
+					"left": 720,
+					"top": 404,
+					"width": 240,
+					"height": 17,
+					"dataSource": "Form:C1466.sessionProperties.type",
+					"enterable": false
+				},
+				"Text17": {
+					"type": "text",
+					"text": "State:",
+					"top": 436,
+					"left": 559,
+					"width": 138,
+					"height": 16
+				},
+				"Input17": {
+					"type": "input",
+					"left": 720,
+					"top": 436,
+					"width": 240,
+					"height": 17,
+					"dataSource": "ProcessStateToString(Form:C1466.sessionProperties.state)",
+					"enterable": false
+				},
+				"Text_warning_sessions": {
+					"type": "text",
+					"text": "⚠️To test the session part, you need to open the HDI on a server.",
+					"top": 270,
+					"left": 340,
+					"width": 531,
+					"height": 16,
+					"fontWeight": "bold",
+					"visibility": "hidden"
+				}
+			}
+		},
+		{
+			"objects": {
+				"information3": {
+					"type": "input",
+					"top": 80,
+					"left": 40,
+					"width": 916,
+					"height": 128,
+					"sizingY": "fixed",
+					"dataSource": "Infos[3].Description",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"class": "description",
+					"sizingX": "grow"
+				},
+				"rb_all_processes": {
+					"type": "radio",
+					"text": "All processes",
+					"top": 236,
+					"left": 60,
+					"width": 250,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"radioGroup": "sGroup",
+					"method": "ObjectMethods/rb_all_processes.4dm"
+				},
+				"rb_all_processes_sessionid": {
+					"type": "radio",
+					"text": "All processes of current session",
+					"top": 265,
+					"left": 60,
+					"width": 250,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"radioGroup": "sGroup",
+					"method": "ObjectMethods/rb_all_processes_sessionid.4dm"
+				},
+				"btn_sessions": {
+					"type": "button",
+					"text": "Execute",
+					"top": 300,
+					"left": 60,
+					"width": 132,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/btn_sessions.4dm"
+				},
+				"List Box": {
+					"type": "listbox",
+					"left": 40,
+					"top": 350,
+					"width": 920,
+					"height": 230,
+					"events": [
+						"onClick",
+						"onHeaderClick",
+						"onDataChange",
+						"onSelectionChange"
+					],
+					"listboxType": "collection",
+					"dataSource": "Form:C1466.activity.processes",
+					"headerHeight": "2em",
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"alternateFill": "automaticAlternate",
+					"columns": [
+						{
+							"header": {
+								"name": "Header4",
+								"text": "ProcessNumber"
+							},
+							"name": "Column4",
+							"footer": {
+								"name": "Footer4"
+							},
+							"dataSource": "This:C1470.number",
+							"width": 80,
+							"minWidth": 60,
+							"maxWidth": 100
+						},
+						{
+							"header": {
+								"text": "Name",
+								"name": "Header1"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"dataSource": "This:C1470.name",
+							"width": 120,
+							"maxWidth": 200,
+							"minWidth": 80
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "SessionID"
+							},
+							"name": "Column2",
+							"footer": {
+								"name": "Footer2"
+							},
+							"dataSource": "This:C1470.sessionID",
+							"width": 120,
+							"maxWidth": 200,
+							"minWidth": 80
+						},
+						{
+							"header": {
+								"name": "Header3",
+								"text": "CreationDate"
+							},
+							"name": "Column3",
+							"dataSource": "This:C1470.creationDateTime",
+							"footer": {
+								"name": "Footer3"
+							},
+							"minWidth": 100,
+							"maxWidth": 200,
+							"dateFormat": "systemShort",
+							"dataSourceTypeHint": "date",
+							"width": 150
+						},
+						{
+							"header": {
+								"name": "Header6",
+								"text": "Visible"
+							},
+							"name": "Column6",
+							"dataSource": "This:C1470.visible",
+							"width": 80,
+							"footer": {
+								"name": "Footer6"
+							},
+							"dataSourceTypeHint": "boolean",
+							"maxWidth": 100,
+							"minWidth": 60,
+							"controlTitle": ""
+						},
+						{
+							"header": {
+								"name": "Header9",
+								"text": "Preemptive"
+							},
+							"name": "Column9",
+							"dataSource": "This:C1470.preemptive",
+							"footer": {
+								"name": "Footer9"
+							},
+							"dataSourceTypeHint": "boolean",
+							"width": 80,
+							"minWidth": 60,
+							"maxWidth": 100,
+							"controlTitle": ""
+						},
+						{
+							"header": {
+								"name": "Header7",
+								"text": "Type"
+							},
+							"name": "Column7",
+							"dataSource": "ProcessTypeToString(This:C1470.type)",
+							"footer": {
+								"name": "Footer7"
+							},
+							"minWidth": 100,
+							"maxWidth": 200
+						},
+						{
+							"header": {
+								"name": "Header8",
+								"text": "State"
+							},
+							"name": "Column8",
+							"dataSource": "ProcessStateToString(This:C1470.state)",
+							"footer": {
+								"name": "Footer8"
+							},
+							"maxWidth": 200,
+							"minWidth": 100
+						}
+					]
+				},
+				"Text1_warning_sessions": {
+					"type": "text",
+					"text": "⚠️To test the session part, you need to open the HDI on a server.",
+					"top": 267,
+					"left": 340,
+					"width": 492,
+					"height": 16,
+					"fontWeight": "bold",
+					"visibility": "hidden"
+				}
+			}
+		}
+	],
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"geometryStamp": 486
+}
