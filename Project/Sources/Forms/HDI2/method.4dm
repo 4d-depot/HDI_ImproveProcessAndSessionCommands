@@ -6,13 +6,14 @@ Case of
 		
 		If (Application type:C494=4D Local mode:K5:1)
 			OBJECT SET ENABLED:C1123(*; "rb_all_processes_sessionid"; False:C215)
-			OBJECT SET ENABLED:C1123(*; "btnSessionProperties"; False:C215)
+			OBJECT SET ENABLED:C1123(*; "btnSessionInfo"; False:C215)
 			
 			OBJECT SET VISIBLE:C603(*; "@warning_sessions"; True:C214)
 		End if 
 		
 		Form:C1466.trace:=True:C214
-		Form:C1466.procProperties:=New object:C1471
+		Form:C1466.processInfo:=New object:C1471
+		Form:C1466.sessionInfo:=New object:C1471
 		
 		Form:C1466.rType:="all_processes"
 		OBJECT SET VALUE:C1742("rb_all_processes"; True:C214)

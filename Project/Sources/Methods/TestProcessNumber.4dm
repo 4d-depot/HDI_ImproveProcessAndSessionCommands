@@ -1,6 +1,6 @@
 //%attributes = {}
 
-$col:=GetActivity(""; False:C215).processes
+$col:=ProcessActivity(""; False:C215).processes
 $c2:=$col.filter(Formula:C1597($1.value.name=$2); "00_Start")
 
 For each ($o; $c2)

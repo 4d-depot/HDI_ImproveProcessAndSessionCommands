@@ -137,7 +137,7 @@
 				},
 				"btnProcessProperties": {
 					"type": "button",
-					"text": "Process Properties",
+					"text": "Process info",
 					"top": 265,
 					"left": 40,
 					"width": 270,
@@ -161,7 +161,7 @@
 					"top": 340,
 					"width": 240,
 					"height": 17,
-					"dataSource": "Form:C1466.procProperties.number",
+					"dataSource": "Form:C1466.processInfo.number",
 					"enterable": false
 				},
 				"Text1": {
@@ -178,7 +178,7 @@
 					"top": 372,
 					"width": 240,
 					"height": 17,
-					"dataSource": "Form:C1466.procProperties.ID",
+					"dataSource": "Form:C1466.processInfo.ID",
 					"enterable": false
 				},
 				"Text2": {
@@ -195,7 +195,7 @@
 					"top": 404,
 					"width": 240,
 					"height": 17,
-					"dataSource": "Form:C1466.procProperties.name",
+					"dataSource": "Form:C1466.processInfo.name",
 					"enterable": false
 				},
 				"Text3": {
@@ -212,7 +212,7 @@
 					"top": 436,
 					"width": 240,
 					"height": 17,
-					"dataSource": "Form:C1466.procProperties.sessionID",
+					"dataSource": "Form:C1466.processInfo.sessionID",
 					"enterable": false
 				},
 				"Text4": {
@@ -229,7 +229,7 @@
 					"top": 468,
 					"width": 240,
 					"height": 17,
-					"dataSource": "Form:C1466.procProperties.creationDateTime",
+					"dataSource": "Form:C1466.processInfo.creationDateTime",
 					"enterable": false
 				},
 				"Text5": {
@@ -246,7 +246,7 @@
 					"top": 340,
 					"width": 240,
 					"height": 17,
-					"dataSource": "Form:C1466.procProperties.preemptive",
+					"dataSource": "Form:C1466.processInfo.preemptive",
 					"enterable": false
 				},
 				"Text6": {
@@ -263,7 +263,7 @@
 					"top": 372,
 					"width": 240,
 					"height": 17,
-					"dataSource": "Form:C1466.procProperties.visible",
+					"dataSource": "Form:C1466.processInfo.visible",
 					"enterable": false
 				},
 				"Text7": {
@@ -280,7 +280,7 @@
 					"top": 404,
 					"width": 240,
 					"height": 17,
-					"dataSource": "ProcessTypeToString(Form:C1466.procProperties.type)",
+					"dataSource": "ProcessTypeToString(Form:C1466.processInfo.type)",
 					"enterable": false
 				},
 				"Text8": {
@@ -297,7 +297,7 @@
 					"top": 436,
 					"width": 240,
 					"height": 17,
-					"dataSource": "ProcessStateToString(Form:C1466.procProperties.state)",
+					"dataSource": "ProcessStateToString(Form:C1466.processInfo.state)",
 					"enterable": false
 				}
 			}
@@ -326,9 +326,9 @@
 					],
 					"class": "description"
 				},
-				"btnSessionProperties": {
+				"btnSessionInfo": {
 					"type": "button",
-					"text": "Session Properties",
+					"text": "Session info",
 					"top": 265,
 					"left": 40,
 					"width": 270,
@@ -336,7 +336,7 @@
 					"events": [
 						"onClick"
 					],
-					"method": "ObjectMethods/btnSessionProperties.4dm"
+					"method": "ObjectMethods/btnSessionInfo.4dm"
 				},
 				"Text9": {
 					"type": "text",
@@ -352,7 +352,7 @@
 					"top": 340,
 					"width": 240,
 					"height": 17,
-					"dataSource": "Form:C1466.sessionProperties.ID",
+					"dataSource": "Form:C1466.sessionInfo.ID",
 					"enterable": false
 				},
 				"Text10": {
@@ -369,7 +369,7 @@
 					"top": 372,
 					"width": 240,
 					"height": 17,
-					"dataSource": "Form:C1466.sessionProperties.userName",
+					"dataSource": "Form:C1466.sessionInfo.userName",
 					"enterable": false
 				},
 				"Text11": {
@@ -386,7 +386,7 @@
 					"top": 404,
 					"width": 240,
 					"height": 17,
-					"dataSource": "Form:C1466.sessionProperties.machineName",
+					"dataSource": "Form:C1466.sessionInfo.machineName",
 					"enterable": false
 				},
 				"Text12": {
@@ -403,7 +403,7 @@
 					"top": 436,
 					"width": 240,
 					"height": 17,
-					"dataSource": "Form:C1466.sessionProperties.systemUserName",
+					"dataSource": "Form:C1466.sessionInfo.systemUserName",
 					"enterable": false
 				},
 				"Text13": {
@@ -420,7 +420,7 @@
 					"top": 468,
 					"width": 240,
 					"height": 17,
-					"dataSource": "Form:C1466.sessionProperties.creationDateTime",
+					"dataSource": "Form:C1466.sessionInfo.creationDateTime",
 					"enterable": false
 				},
 				"Text14": {
@@ -437,7 +437,7 @@
 					"top": 340,
 					"width": 240,
 					"height": 17,
-					"dataSource": "Form:C1466.sessionProperties.IPAdress",
+					"dataSource": "Form:C1466.sessionInfo.IPAddress",
 					"enterable": false
 				},
 				"Text15": {
@@ -454,7 +454,7 @@
 					"top": 372,
 					"width": 240,
 					"height": 17,
-					"dataSource": "Form:C1466.sessionProperties.hostType",
+					"dataSource": "Form:C1466.sessionInfo.hostType",
 					"enterable": false
 				},
 				"Text16": {
@@ -471,7 +471,7 @@
 					"top": 404,
 					"width": 240,
 					"height": 17,
-					"dataSource": "Form:C1466.sessionProperties.type",
+					"dataSource": "Form:C1466.sessionInfo.type",
 					"enterable": false
 				},
 				"Text17": {
@@ -488,7 +488,7 @@
 					"top": 436,
 					"width": 240,
 					"height": 17,
-					"dataSource": "ProcessStateToString(Form:C1466.sessionProperties.state)",
+					"dataSource": "Form:C1466.sessionInfo.state",
 					"enterable": false
 				},
 				"Text_warning_sessions": {
@@ -726,5 +726,5 @@
 			"View 1": {}
 		}
 	},
-	"geometryStamp": 486
+	"geometryStamp": 487
 }
